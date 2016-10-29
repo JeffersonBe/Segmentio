@@ -342,7 +342,7 @@ open class Segmentio: UIView {
     
     // MARK: - Actions:
     // MARK: Reload segmentio
-    fileprivate func reloadSegmentio() {
+    func reloadSegmentio() {
         segmentioCollectionView?.reloadData()
         scrollToItemAtContext()
         moveShapeLayerAtContext()
@@ -350,7 +350,7 @@ open class Segmentio: UIView {
 
     // MARK: Move shape layer to item
     
-    fileprivate func moveShapeLayerAtContext() {
+    func moveShapeLayerAtContext() {
         if let indicatorLayer = indicatorLayer, let options = segmentioOptions.indicatorOptions {
             let item = itemInSuperview(ratio: options.ratio)
             let context = contextForItem(item)
@@ -390,7 +390,7 @@ open class Segmentio: UIView {
     
     // MARK: Scroll to item
     
-    fileprivate func scrollToItemAtContext() {
+    func scrollToItemAtContext() {
         guard let numberOfSections = segmentioCollectionView?.numberOfSections else {
             return
         }
